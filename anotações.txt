@@ -1,5 +1,5 @@
-
 01-config setup 
+
 
 01-instalar laravel em ambiente docker
 -usado template próprio
@@ -7,4 +7,39 @@
 -resetado o repositório GIT e iniciado um próprio 
     rm -rf .git/
     git init
--
+
+02-versionar projeto laravel com Git  e armazenar no github 
+-feito o primeiro commit 
+
+03-usar o redis no laravel 
+-torna o processo otimizado 
+-alterações para redis no .env: 
+    CACHE_DRIVER=redis
+    QUEUE_CONNECTION=redis
+    SESSION_DRIVER=redis
+    REDIS_HOST=redis
+
+04-acessar banco de dados Docker pelo Mysql workbench 
+-erro de conexão com mysql workbench, solução: 
+    O outro erro é de SSL "ssl connection error" e resolve:
+    Acesse a aba Advanced/Avançada (dentro das conexões), no campo Others/Outros coloque: useSSL=0
+-conectado 
+-erro das migrations, sempre rodar anteS: 
+    php artisan config:clear
+
+05-instalar e configurar o laravel telescope 
+-telescope serve para monitorar as requisições de maneira mais detalhada 
+-composer require laravel/telescope
+-php artisan telescope:install
+-para acessar: 
+    http://127.0.0.1:8989/telescope/requests 
+
+06-configurações de rotas no laravel 
+-em RouteServiceProvider, no método boot(), retira o Route web, e do api, retira o prefix 
+-php artisan route:cache
+-Route get de '/'
+
+
+02-APIs da EAD 
+
+
