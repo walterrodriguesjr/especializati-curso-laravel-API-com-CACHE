@@ -1,0 +1,10 @@
+
+01-config setup 
+
+01-instalar laravel em ambiente docker
+-usado template próprio
+-configurado .ENV, criado e conectado banco de dados para o projeto 
+-resetado o repositório GIT e iniciado um próprio 
+    rm -rf .git/
+    git init
+-
