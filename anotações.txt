@@ -43,3 +43,33 @@
 02-APIs da EAD 
 
 
+01-criar model e migration de cursos no laravel 
+-criando e configurando model e migration de Course 
+    php artisan make:model Course -m
+-rodada a migration 
+
+02-laravel com repositories + service layers + resources + request 
+-criando o controller de Course 
+    php artisan make:controller Api//CourseController --api
+        criado no padrão resource, métodos de CRUD inclusos
+-criado em app, o diretório Services, e dentro o arquivo CourseService.php 
+    este irá conter toda a lógica de banco(1-mais simples)
+-criado em app, o diretório Repositories, e dentro o arquivo CourseRepository.php 
+    este irá conter toda a lógica de banco(2-mais indicada, mais complexa)
+-o controller padrão de CourseController irá chamar por Services, que, 
+    por sua vez chama o Repositories 
+-criado método __contruct em CourseController 
+-em api.php, implementado as routes padrão 
+-para padronizar todos os retornos de Course, criado um arquivo 
+    CourseResource 
+    php artisan make:resource CourseResource
+-O CourseController não executada lógica de consulta diretamente, 
+    ele chama um método de Service, que então chamará um método 
+    de Repository exclusivo de consulta de model 
+
+03-API de registros de cursos no laravel 
+-
+
+
+
+
